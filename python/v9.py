@@ -43,7 +43,7 @@ class V9Component(object):
             request_body = deserialized_line["request_body"]
 
             if function not in self.functions:
-                return serialize_response(404, "Function not found!")
+                return serialize_response(404, "v9: lib 404 (function not found)")
 
             try:
                 (response_code, response_body) = self.functions[function](http_method, path, request_arguments, request_body)
